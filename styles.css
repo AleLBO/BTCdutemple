@@ -1,0 +1,593 @@
+:root{
+    --text-color1 : #ffffff;
+    --text-color2 : #000000;
+    --text-color3: #b60606;
+    --text-color4: #2e8b57;
+    --text-color5: #888888;
+
+    --text-size: 3vh;
+    --h2-size : 5vh;
+    --h3-size : 4vh;
+
+    --bg-color1: #ffffff;
+    --bg-color2: #1a1a1a;
+    --bg-color3: #000000;
+    --bg-color4: #f5f5f5;
+    --bg-accent: #b60606;
+    --bg-neutral: #cccccc;
+
+
+
+}
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity : 1;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    width: 100%;
+}
+
+.first-section{
+    background-image : url(/image/main-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width : 100%;
+    height : 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section h1{
+    font-size: 9vh;
+    color : var(--text-color1);
+    text-shadow: 2px 0 2px #fff;
+    text-align: center;
+    padding: auto;
+    text-transform: uppercase;
+
+    animation: fadeIn 2s;
+}
+
+.first-section p{
+    font-size: 4vh;
+    color : var(--text-color1);
+    text-shadow: 2px 0 2px #fff;
+    text-align: center;
+    padding: auto;
+
+    margin-bottom: 20vh;
+
+    animation: fadeIn 2s;
+}
+
+h2{
+    margin : 2vh 0 1vh;
+    font-size: var(--h2-size);
+}
+.first-h2{
+    margin-top : 6vh;
+}
+p{
+    font-size: var(--text-size) ;
+}
+
+
+a{
+    text-decoration: none;
+    color : orangered;
+    padding-bottom: 5px;
+}
+a:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+
+/*------------pages---------------*/
+
+.accueil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accueil-contenu{
+    margin: 2vh 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin: 3vh 2vw 5vh;
+}
+.accueil-contenu p{
+    text-align: center;
+    margin: 0 2px;
+}
+
+/*----section version 1----*/
+.sec1{
+    width: 100%;
+    background-color: var(--bg-color2);
+    color: var(--text-color1);
+    padding: 5vh 5vw;
+}
+.sec1 h2{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.sec1 p{
+    margin: 3vh 1.5vw 1.5vh;
+    text-align: justify;
+}
+.sec1 ul{
+    margin: 0 1.5vw 1.5vh;
+}
+.sec1 li{
+    list-style-position: inside;
+    font-size: var(--text-size);
+    text-align: justify;
+    margin-bottom: 1vh;
+}
+
+/*----section version 2----*/
+
+.sec2{
+    width: 100%;
+    background-color: var(--bg-color4);
+    color: var(--text-color2);
+    padding: 5vh 5vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.sec2 h2{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.sec2 h3{
+    text-align: justify;
+    margin-bottom: 4vh;
+    font-size: var(--h3-size);
+}
+.sec2 iframe{
+    width : 75%;
+    height : 50vh;
+    border: 0;
+}
+.sec2 p{
+    margin:0 0 1.5vh;
+    text-align: justify;
+}
+.sec2 p:last-of-type{
+    margin-bottom: 3vh;
+}
+.sec2 a:hover{
+    color : var(--text-color4)
+}
+.sec2 a:active{
+    color : var(--text-color4)
+}
+
+/*--- section version 3---*/
+
+.sec3{
+    width: 100%;
+    background-color: var(--bg-color1);
+    color: var(--text-color2);
+    padding: 5vh 5vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 0 2vw;
+}
+.sec3 div:first-of-type{
+    padding: 0 3vw;
+    text-align: center;
+}
+.sec3 h2{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.sec3 h3{
+    text-align: justify;
+    margin-bottom: 4vh;
+    font-size: var(--h3-size);
+}
+.sec3 p{
+    margin:2vh 2vw 1.5vh;
+    text-align: justify;
+}
+.sec3 p:last-of-type{
+    margin-bottom: 4vh;
+}
+.sec3 a.inscription:hover{
+    background-color: var(--text-color4);
+    text-decoration: none;
+}
+.sec3 a.inscription:active{
+    background-color: var(--text-color4);
+    text-decoration: none;
+}
+.sec3 img{
+    width: 75%;
+    height: 75vh;
+}
+.sec3 a.inscription{
+    display: inline-block;
+    justify-self: center;
+    padding: 10px;
+    background-color: orangered;
+    border-color: orangered;
+    color: var(--text-color1);
+    border-radius: 10px;
+    font-size: calc(0.5rem + 2vw);
+}
+
+/*----- section photos-----*/
+
+.photos{
+    width: 100%;
+    padding : 4vh 0 5vh;
+    background-color: var(--bg-color4);
+}
+.photos h2{
+    text-align: center;
+    padding-bottom: 3vh;
+}
+
+
+
+
+
+
+/*----------Footer---------*/
+footer{
+    width: 100%;
+    height : 40vh;
+    background-color: var(--bg-color2);
+    color: var(--text-color1);
+}
+.footer{
+    width: 30vw;
+    padding-top: 3vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap :2vh;
+}
+
+/*facebook icon*/
+
+#fab-icon {
+  width: 100%;
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+}
+
+#fab-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1877f2;
+}
+
+#fab-icon svg {
+  width: 6vh;
+  height: 6vh;
+  fill: #fff; /* force la couleur blanche de l'icône */
+}
+
+
+
+
+
+
+p a[href="#top"]{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width : 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    background-color: orangered;
+    color: var(--text-color1);
+
+    position: fixed;
+    bottom : 3vh;
+    right : 2vw;
+
+    text-decoration: none;
+}
+
+p a[href="#top"]::-moz-focus-inner {
+  border: 0;
+}
+
+
+/*--Carousel--*/
+.carousel{
+    margin: 0 20vw;
+    width: 60vw;
+    height: 45vh;  
+    position: relative;  
+}
+.carousel button{
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 2.6rem;
+    z-index: 999;
+    cursor: pointer;
+    color: #fff;
+    transform: translateY(-50%);
+    top: 50%;
+}
+#prev{
+    left: 5px;
+}
+#next{
+    right: 5px;
+}
+.carousel li{
+    list-style: none;
+}
+.slide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.slide.active{
+    opacity: 1;
+}
+.slide img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*------NAVBAR---------*/
+
+nav{
+    position: fixed;
+    top: 0;
+    height : 8vh;
+    width : 100%;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(0,0,0,0.0);
+    transition: background-color 0.5s ease;
+    z-index: 1000;
+
+    font-size: calc(0.3rem + 1vw);
+    padding: 10px;
+
+
+}
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  height : 6vh;
+}
+nav.no_image{
+    background-color: rgba(0,0,0,0.9)
+}
+
+
+.site-icon{
+    height : 5vh;
+    display: inline-block;
+    margin-top: 1vh;
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex : 1;
+    text-transform: uppercase;
+}
+nav ul li{
+    list-style-type: none ;
+}
+
+li a{
+    text-decoration: none;
+    color : var(--text-color1)
+}
+li a:hover{
+    text-decoration: underline #fff;
+}
+
+#icons{
+    cursor: pointer;
+    display: none;
+}
+
+
+@media screen and (max-width  :1024px){
+
+    .first-section h1{
+        font-size: 9vw;
+    }
+
+    /*--NAVBAR--*/
+    #icons{
+        display: block;
+    }
+    #icons::before{
+        content: "\2630";
+        color: var(--text-color1);
+        vertical-align: middle;
+        font-size: 4vh ;
+    }
+    .active #icons::before{
+        content: "\2715";
+        color: var(--text-color1);
+        vertical-align: middle;
+        font-size: 4vh ;
+    }
+
+    nav ul{
+        position : fixed;
+        right : -100%;
+        top : 5%;
+        flex-direction: column;
+        background-color: black;
+        width: 80%;
+        height : 100%;
+        text-align: right;
+        transition: right 0.5s ease;
+
+    }
+    nav.active ul{
+        right : 0;
+        top : 6%;
+        align-items: flex-end;
+        padding-right: 5vw;
+    }
+
+    nav.active{
+        background-color: black;
+        height: 6vh;
+    }
+
+    nav li{
+        padding: 3px 0;
+    }
+
+    nav li a:hover, 
+    nav li a:active {
+        text-decoration: none !important;
+    }
+    
+    nav.active li a {
+        font-size : 2.3vh;
+    }
+    nav.active li a {
+        font-size: clamp(1rem, 2.3vh, 1.5rem);
+    }
+    
+
+
+    /*--Carousel--*/
+    .carousel{
+        margin: 0 1vw;
+        width: 98vw;
+        height: 45vh; 
+    }
+    .carousel img{
+        object-fit: contain;
+    }
+
+    /*---Footer---*/
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        width :100%;
+        height: 100%;
+        padding: 10%;
+    }
+    .footer #fab-icon{
+        grid-column: 1/-1;
+    }
+
+    /*--liste--*/
+    .sec1 li{
+        margin-bottom: 3vh;
+    }
+    /*--accueil--*/
+    .accueil-contenu{
+        margin: 2vh 2vw;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 4vh;
+    }
+    .accueil-contenu img{
+        margin : auto;
+    }
+    .accueil-contenu p{
+        margin-bottom: 3vh;
+    }
+
+    /*--section 2 pour le grid--*/
+    .sec2{
+        width: 100%;
+        color: var(--text-color2);
+        padding: 5vh 5vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3vh;
+    }
+    .sec2 div:nth-of-type(2){
+        order :-1;
+        text-align: center;
+    }
+    .sec2 iframe{
+        display: inline-flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    /*-- section 3 pour le grid-- */
+    .sec3{
+        width: 100%;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec3 img{
+        display: none;        
+    }
+    .sec3 a.inscription{
+        font-size: calc(0.5rem + 4vw);
+    }
+
+    /*--- ajustement section photos---*/
+    .photos h2{
+        padding-bottom: 3vh;
+        margin-bottom: 0;
+    }
+    .carousel{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+}

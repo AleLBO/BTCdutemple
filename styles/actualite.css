@@ -1,0 +1,144 @@
+:root{
+    --text-color1 : #ffffff;
+    --text-color2 : #000000;
+    --text-color3: #b60606;
+    --text-color4: #2e8b57;
+    --text-color5: #888888;
+
+    --text-size: 3vh;
+    --h2-size : 5vh;
+    --h3-size : 4vh;
+
+    --bg-color1: #ffffff;
+    --bg-color2: #1a1a1a;
+    --bg-color3: #000000;
+    --bg-color4: #f5f5f5;
+    --bg-accent: #b60606;
+    --bg-neutral: #cccccc;
+
+
+
+}
+
+/*---- header ----*/
+
+.actualites-header{
+    width: 100%;
+    margin: 20vh auto 7vh;
+    text-align: center;
+}
+.actualites-header h2{
+    display: inline-block;
+    border-bottom: 1px solid #888888;
+    padding: 0 3vw 5vh ;
+    margin: 0 2vw;
+    font-size: clamp(2rem, 1rem + 5vw, 5rem);
+}
+
+/*---- liens spéciaux ----*/
+
+.special-links{
+    position: fixed;
+    top: 11vh;
+    left: 3vw;
+
+    text-align: center;
+}
+
+.special-links a{
+    display: inline-block;
+    padding: 1.5vw;
+    background-color: orangered;
+    border: solid 1px orangered;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.special-links a:hover{
+    text-decoration: none;
+    transform: scale(0.9);
+}
+
+
+/*---- Contenu ----*/
+
+.actu-flex-content{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin: auto;
+    
+}
+.actu-flex-content section{
+    width: 100%;
+    padding: 4vh 5vw 3vh;
+    margin: auto;
+
+    border-radius: 5px;
+    text-align: center;
+}
+.actu-flex-content section::after{
+    content:"";
+    display: block;
+    width: auto;
+    height: 1px;
+    background-color: #1a1a1a;
+    margin: 3vh 2vw 2vh;
+}
+
+.actu-flex-content section h3{
+    padding-bottom: 2vh;
+    font-size: calc(0.5rem + 2vw);
+}
+
+.actu-flex-content section p{
+  margin-top: 3vh;
+  padding: 0 10px;
+  text-align: justify;
+  font-size: calc(0.5rem + 1vw);
+}
+.actu-flex-content section li{
+  list-style-position: inside;
+  padding: 0 5%;
+  line-height: 120%;
+  font-size: calc(0.5rem + 1vw);
+  text-align: justify;
+}
+
+
+.actu-flex-content section .actu-content-date{
+  display: inline-block;
+  color : grey;
+  border-top : 1px solid lightgray;
+  padding : 2px 0 2vh;
+  margin: 10px 0;
+}
+
+.actu-flex-content section .actu-content-important{
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-weight: 1000;
+  padding : 2px 0;
+  text-align: center;
+}
+.actu-flex-content section .actu-content-signature{
+  font-style: italic ;
+}
+
+
+
+@media (max-width: 1024px){
+    .actu-flex-content{
+        width: 80%;        
+    }
+    .actu-flex-content section h3{
+        font-size: calc(0.5rem + 2.5vw);
+    }
+    .actu-flex-content section p{
+        font-size: calc(0.5rem + 1.5vw);
+    }
+    .special-links{
+        position: absolute;
+    }
+
+}
