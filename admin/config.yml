@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Où stocker les images envoyées depuis l'admin
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Les collections = les types de contenus gérés par le CMS
+collections:
+  - name: "articles"          
+    label: "Actualités"       
+    folder: "content/actualites"  # où cela sauvegarde les articles
+    create: true              # Autoriser la création de nouveaux fichiers
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Nom du fichier
+    fields:
+      - { name: "title", label: "Titre", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Contenu", widget: "markdown" }
+      - { name: "image", label: "Image principale", widget: "image", required: false }

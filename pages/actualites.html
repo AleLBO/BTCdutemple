@@ -54,54 +54,32 @@
         <a href="evenement-passes.html">Evénements passés</a>
     </div>
 
-    <div class="actu-flex-content">
-        <section>
-            <h3>CONCOURS 150 plateaux FU du 21 septembre</h3>
-            <p class="actu-content-date">18 août 2025</p>
-            <p>Les inscriptions au concours 150 plateaux FU du 21 septembre sont ouvertes.</p>
-            <p class="actu-content-important">Attention : limité à 72 tireurs !</p>
-            <p class="actu-content-before-list">Pour s’inscrire :</p>
-            <ul>
-                <li>Par téléphone en appelant Didier (06 16 04 79 96) ou Michel (06 08 31 06 47)</li>
-                <li>Ou directement au bureau les jours d’entraînement.</li>
-            </ul>
-            <p class="actu-content-important">Penser à réserver votre repas lors de l’inscription (tout repas non réservé ne pourra être fourni)</p>
-            <p>Clôture des inscriptions le jeudi 18 septembre.</p>
-            <p>Tirage au sort des planches le vendredi 19 septembre en soirée.</p>
-            <p class="actu-content-signature">Amitiés sportives.</p>
-        </section>
-        <section>
-            <h3>Rappel Inscriptions Concours DTL du 31 aout 2025</h3>
-            <p class="actu-content-date">18 août 2025</p>
-            <p>Les inscriptions au concours 100 plateaux DTL du 31 août sont toujours ouvertes</p>
-            <p>Pour s’inscrire :</p>
-            <ul>
-                <li>Par téléphone en appelant Didier (06 16 04 79 96) ou Michel (06 08 31 06 47)</li>
-                <li>Ou directement au bureau les jours d’entraînement.</li>
-            </ul>
-            <p class="actu-content-important">Penser à réserver votre repas lors de l’inscription (tout repas non réservé ne pourra être fourni)</p>
-            <p>Clôture des inscriptions le jeudi 28 août.</p>
-            <p>Tirage au sort des planches le vendredi 29 août en soirée.</p>
-            <p>L’équipe du Temple vous attend nombreux pour son dernier 100 DTL de la saison.</p>
-            <p class="actu-content-signature">Amitiés sportives.</p>
-        </section>
-        
-        <section>
-            <h3>CONCOURS DTL du 31 aout 2025</h3>
-            <p class="actu-content-date">1 août 2025</p>
-            <p>Les inscriptions au concours 100 plateaux DTL du 31 août sont ouvertes.</p>
-            <p class="actu-content-before-list">Pour s’inscrire :</p>
-            <ul>
-                <li>Par téléphone en appelant Didier (06 16 04 79 96) ou Michel (06 08 31 06 47)</li>
-                <li>Ou directement au bureau les jours d’entraînement.</li>
-            </ul>
-            <p class="actu-content-important">Penser à réserver votre repas lors de l’inscription (tout repas non réservé ne pourra être fourni)</p>
-            <p>Clôture des inscriptions le jeudi 28 août.</p>
-            <p>Tirage au sort des planches le vendredi 29 août en soirée.</p>
-            <p>L’équipe du Temple vous attend nombreux pour son dernier 100 DTL de la saison.</p>
-            <p class="actu-content-signature">Amitiés sportives.</p>
-        </section>
-    </div> 
+    <div id="articles-list"></div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <script>
+        fetch('../content/actualites/articles.json')
+        .then(res => res.json())
+        .then(articles => {
+            const container = document.getElementById('articles-list');
+            articles.sort((a,b) => new Date(b.date) - new Date(a.date));
+
+            articles.forEach(article => {
+            const div = document.createElement('div');
+            div.classList.add('article');
+            div.innerHTML = `
+                <h2>${article.title}</h2>
+                <p><em>${new Date(article.date).toLocaleDateString()}</em></p>
+                <div>${marked.parse(article.body)}</div>
+                <hr>
+            `;
+            container.appendChild(div);
+            });
+        })
+        .catch(err => console.error('Erreur chargement articles:', err));
+    </script>
+
+    
     
     
     <footer>
