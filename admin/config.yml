@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: AleLBO/BTCdutemple
   branch: main
+  auth_type: "oauth"
 
 # Où stocker les images envoyées depuis l'admin
 media_folder: "images/uploads"
