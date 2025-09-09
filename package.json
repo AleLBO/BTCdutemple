@@ -20,5 +20,8 @@
   "homepage": "https://github.com/AleLBO/BTCdutemple#readme",
   "dependencies": {
     "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.5.1"
   }
 }
