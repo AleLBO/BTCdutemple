@@ -35,30 +35,6 @@
     font-size: clamp(2rem, 1rem + 5vw, 5rem);
 }
 
-/*---- liens spéciaux ----*/
-
-.special-links{
-    position: fixed;
-    top: 11vh;
-    left: 3vw;
-
-    text-align: center;
-}
-
-.special-links a{
-    display: inline-block;
-    padding: 1.5vw;
-    background-color: orangered;
-    border: solid 1px orangered;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.special-links a:hover{
-    text-decoration: none;
-    transform: scale(0.9);
-}
-
 
 /*---- Contenu ----*/
 
@@ -136,9 +112,6 @@
     }
     .actu-flex-content section p{
         font-size: calc(0.5rem + 1.5vw);
-    }
-    .special-links{
-        position: absolute;
     }
 
 }
