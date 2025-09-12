@@ -21,7 +21,5 @@
   "dependencies": {
     "gray-matter": "^4.0.3"
   },
-  "devDependencies": {
-  "@netlify/plugin-run-script": "^x.x.x"
-  }
+  "devDependencies": {}
 }
