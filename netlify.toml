@@ -1,6 +1,3 @@
 [build]
   command = "npm run build:articles"
   publish = "."
-
-[[plugins]]
-  package = "@netlify/plugin-run-script"
