@@ -2,15 +2,15 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"     # Où les images sont stockées dans le repo
-public_folder: "/images/uploads"   # URL publique des images
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "articles"          
-    label: "Actualités"       
-    folder: "content/actualites"   # Dossier des articles dans le repo
-    create: true                   # Autoriser la création de nouveaux fichiers
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Nom du fichier généré
+  - name: "articles"
+    label: "Actualités"
+    folder: "content/actualites"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { name: "title", label: "Titre", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
