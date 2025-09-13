@@ -1,8 +1,8 @@
 backend:
-  name: github
-  repo: AleLBO/BTCdutemple
+  name: auth0
+  auth0_domain: "dev-hvdfv7io1frho3fp.eu.auth0.com"   # ou .us.auth0.com si ton tenant est US
+  auth0_client_id: "iMhC3oxz8s2kCsPOfm6TjaGijrbXKIoG"                    # à récupérer dans Auth0 > Applications > Settings
   branch: main
-  auth_type: "oauth"
 
 # Où stocker les images envoyées depuis l'admin
 media_folder: "images/uploads"
