@@ -1,20 +1,16 @@
 backend:
-  name: auth0
-  auth0_domain: "dev-hvdfv7io1frho3fp.eu.auth0.com"   # ou .us.auth0.com si ton tenant est US
-  auth0_client_id: "iMhC3oxz8s2kCsPOfm6TjaGijrbXKIoG"                    # à récupérer dans Auth0 > Applications > Settings
+  name: git-gateway
   branch: main
 
-# Où stocker les images envoyées depuis l'admin
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads"     # Où les images sont stockées dans le repo
+public_folder: "/images/uploads"   # URL publique des images
 
-# Les collections = les types de contenus gérés par le CMS
 collections:
   - name: "articles"          
     label: "Actualités"       
-    folder: "content/actualites"  # où cela sauvegarde les articles
-    create: true              # Autoriser la création de nouveaux fichiers
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Nom du fichier
+    folder: "content/actualites"   # Dossier des articles dans le repo
+    create: true                   # Autoriser la création de nouveaux fichiers
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Nom du fichier généré
     fields:
       - { name: "title", label: "Titre", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
