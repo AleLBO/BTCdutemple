@@ -1,7 +1,0 @@
-[build]
-  command = "npm run build:articles"
-  publish = "."  # la racine du site contient le dossier 'admin'
-
-# Optionnel : plugins si tu en utilises
-# [[plugins]]
-#   package = "@netlify/plugin-run-build"
