@@ -1,0 +1,3 @@
+[build]
+  command = ""      # Pas de build spécifique pour l'instant
+  publish = "."     # La racine contient le dossier admin et le site statique
