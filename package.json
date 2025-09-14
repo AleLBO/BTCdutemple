@@ -1,0 +1,13 @@
+{
+  "name": "mon-projet",
+  "version": "1.0.0",
+  "description": "Projet site avec Netlify CMS et génération JSON des articles",
+  "main": "index.js",
+  "scripts": {
+    "generate-articles": "node generate-articles-json.js",
+    "build": "npm run generate-articles && echo 'Build statique...'"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
